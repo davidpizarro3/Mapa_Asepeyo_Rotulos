@@ -16,10 +16,15 @@ def get_estado_color(estado):
     if estado in ['malo', 'bad', 'poor']: return 'red'
     return 'gray' # Para Pendiente o sin datos
 
+# Función auxiliar para comprobar si hay licencia
+def tiene_licencia(val):
+    if pd.isna(val): return False
+    return str(val).strip() != ''
+
 # --- 3. Carga de Datos (Desde tu GitHub) ---
 @st.cache_data
 def load_data():
-    # URL raw de tu repositorio público en GitHub (sin token)
+    # URL raw de tu repositorio público en GitHub
     csv_url = "https://raw.githubusercontent.com/davidpizarro3/Mapa_Asepeyo_Rotulos/refs/heads/main/data.csv"
     
     try:
@@ -44,7 +49,7 @@ df = load_data()
 
 # --- 4. Filtros ---
 st.header("Filtrar Centros")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 if not df.empty:
     with col1:
@@ -53,6 +58,9 @@ if not df.empty:
         provincia_filter = st.multiselect("Provincia", df['Provincia'].dropna().unique() if 'Provincia' in df.columns else [])
     with col3:
         estado_filter = st.multiselect("Estado del Rótulo", df['Estado Rótulo'].dropna().unique() if 'Estado Rótulo' in df.columns else [])
+    with col4:
+        # Nuevo filtro de Licencia
+        licencia_filter = st.selectbox("Licencia de Rotulación", ["Todos", "Con Licencia", "Sin Licencia"])
 
     # Aplicar filtros
     filtered_df = df.copy()
@@ -62,6 +70,12 @@ if not df.empty:
         filtered_df = filtered_df[filtered_df['Provincia'].isin(provincia_filter)]
     if estado_filter:
         filtered_df = filtered_df[filtered_df['Estado Rótulo'].isin(estado_filter)]
+        
+    # Aplicar filtro de Licencia
+    if licencia_filter == "Con Licencia":
+        filtered_df = filtered_df[filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
+    elif licencia_filter == "Sin Licencia":
+        filtered_df = filtered_df[~filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
 else:
     filtered_df = pd.DataFrame()
     st.warning("No se han podido cargar los datos para aplicar filtros.")
@@ -75,7 +89,7 @@ pins_layer = folium.FeatureGroup(name="📍 Rótulos", show=True)
 
 if not filtered_df.empty:
     for idx, row in filtered_df.iterrows():
-        # Verificamos que tengamos latitud y longitud válidas después de haber separado el Geo-Loaction
+        # Verificamos que tengamos latitud y longitud válidas
         if 'Latitude' in row and 'Longitude' in row and pd.notna(row['Latitude']) and pd.notna(row['Longitude']):
             
             estado = str(row.get('Estado Rótulo', 'Pendiente'))
@@ -90,6 +104,16 @@ if not filtered_df.empty:
                 licencia_html = f'<a href="{licencia_link}" target="_blank" style="color: #28a745; font-weight: bold;">📄 Ver Licencia de Rotulación</a>'
             else:
                 licencia_html = '<i style="color: gray;">Sin licencia adjunta</i>'
+                
+            # Extraer las Observaciones (si existen y no están vacías)
+            observaciones_texto = row.get('Observaciones')
+            obs_html = ""
+            if pd.notna(observaciones_texto) and str(observaciones_texto).strip() != '':
+                obs_html = f"""
+                <div style='margin-top: 10px; padding: 8px; background-color: #fff9e6; border-left: 4px solid #ffc107; font-size: 13px; color: #333;'>
+                    <b>Observaciones:</b><br>{str(observaciones_texto)}
+                </div>
+                """
             
             # Diseño del Popup
             popup_info = f"""
@@ -103,8 +127,11 @@ if not filtered_df.empty:
                 <b>Estado del Rótulo:</b> 
                 <span style="background-color: {pin_color}; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold;">{estado.upper()}</span><br><br>
                 
-                {licencia_html}<br><br>
+                {licencia_html}
                 
+                {obs_html}
+                
+                <br><br>
                 <a href="{gmaps_link}" target="_blank" style="text-decoration: none; color: #0056b3; font-weight: bold;">📍 Abrir en Google Maps</a>
             </div>
             """
@@ -133,7 +160,7 @@ st_folium(m, width=1200, height=650, returned_objects=[])
 # --- 6. Tabla de Datos y Exportación ---
 st.header("Datos de los Centros")
 if not filtered_df.empty:
-    # Ocultar las columnas generadas internamente (Latitude y Longitude) para que la tabla quede fiel a tu CSV
+    # Ocultar las columnas generadas internamente para que la tabla sea fiel al CSV
     display_df = filtered_df.drop(columns=['Latitude', 'Longitude'], errors='ignore')
     st.dataframe(display_df, use_container_width=True)
 
