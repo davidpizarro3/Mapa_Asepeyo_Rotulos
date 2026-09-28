@@ -20,7 +20,7 @@ def get_estado_color(estado):
 @st.cache_data
 def load_data():
     # URL raw de tu repositorio en GitHub
-    csv_url = "https://raw.githubusercontent.com/davidpizarro3/Mapa_Asepeyo_Rotulos/refs/heads/main/data.csv?token=GHSAT0AAAAAAEKO7UMEZA5Z64YZYRLO47PU2V2JQ5Q"
+    csv_url = "https://raw.githubusercontent.com/davidpizarro3/Mapa_Asepeyo_Rotulos/refs/heads/main/data.csv"
     
     try:
         df = pd.read_csv(csv_url)
