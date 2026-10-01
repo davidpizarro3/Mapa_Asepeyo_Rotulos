@@ -59,7 +59,7 @@ if not df.empty:
     with col3:
         estado_filter = st.multiselect("Estado del Rótulo", df['Estado Rótulo'].dropna().unique() if 'Estado Rótulo' in df.columns else [])
     with col4:
-        licencia_filter = st.selectbox("Licencia de Rotulación", ["Todos", "Encontrado", "No encontrado"])
+        licencia_filter = st.selectbox("Licencia de Rotulación", ["Todos", "Encontrada", "No encontrada"])
 
     # Aplicar filtros
     filtered_df = df.copy()
@@ -71,9 +71,9 @@ if not df.empty:
         filtered_df = filtered_df[filtered_df['Estado Rótulo'].isin(estado_filter)]
         
     # Aplicar filtro de Licencia
-    if licencia_filter == "Encontrado":
+    if licencia_filter == "Encontrada":
         filtered_df = filtered_df[filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
-    elif licencia_filter == "No encontrado":
+    elif licencia_filter == "No encontrada":
         filtered_df = filtered_df[~filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
 else:
     filtered_df = pd.DataFrame()
@@ -81,7 +81,7 @@ else:
 
 # --- 5. Mapa Interactivo ---
 st.header("Mapa Interactivo")
-# Centrar el mapa en España por defecto, usando OpenStreetMap (sin marcas de agua)
+# Centrar el mapa en España por defecto, usando OpenStreetMap
 m = folium.Map(location=[40.4637, -3.7492], zoom_start=6, tiles="OpenStreetMap")
 
 pins_layer = folium.FeatureGroup(name="📍 Rótulos", show=True)
@@ -94,7 +94,7 @@ if not filtered_df.empty:
             estado = str(row.get('Estado Rótulo', 'Pendiente'))
             pin_color = get_estado_color(estado)
             
-            # NUEVO ENLACE: Abre directamente en modo Street View
+            # Enlace a Google Maps en modo Street View
             gmaps_link = f"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint={row['Latitude']},{row['Longitude']}"
             
             # Enlace a la Licencia
@@ -103,6 +103,13 @@ if not filtered_df.empty:
                 licencia_html = f'<a href="{licencia_link}" target="_blank" style="color: #28a745; font-weight: bold;">📄 Ver Licencia de Rotulación</a>'
             else:
                 licencia_html = '<i style="color: gray;">Sin licencia adjunta</i>'
+                
+            # NUEVO: Enlace a Imágenes Extra
+            imagenes_link = str(row.get('Imágenes', row.get('Imagenes', '')))
+            if pd.notna(imagenes_link) and imagenes_link.startswith('http'):
+                imagenes_html = f'<br><a href="{imagenes_link}" target="_blank" style="color: #17a2b8; font-weight: bold;">📸 Ver Galería de Imágenes</a>'
+            else:
+                imagenes_html = '<br><i style="color: gray;">Sin imágenes adicionales</i>'
                 
             # Extraer las Observaciones
             observaciones_texto = row.get('Observaciones')
@@ -127,6 +134,7 @@ if not filtered_df.empty:
                 <span style="background-color: {pin_color}; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold;">{estado.upper()}</span><br><br>
                 
                 {licencia_html}
+                {imagenes_html}
                 
                 {obs_html}
                 
