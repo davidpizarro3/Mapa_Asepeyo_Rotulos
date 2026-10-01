@@ -21,8 +21,8 @@ def tiene_licencia(val):
     if pd.isna(val): return False
     return str(val).strip() != ''
 
-# --- 3. Carga de Datos (Desde tu GitHub) ---
-@st.cache_data
+# --- 3. Carga de Datos (Desde tu GitHub con actualización cada 60s) ---
+@st.cache_data(ttl=60)
 def load_data():
     # URL raw de tu repositorio público en GitHub
     csv_url = "https://raw.githubusercontent.com/davidpizarro3/Mapa_Asepeyo_Rotulos/refs/heads/main/data.csv"
@@ -59,8 +59,7 @@ if not df.empty:
     with col3:
         estado_filter = st.multiselect("Estado del Rótulo", df['Estado Rótulo'].dropna().unique() if 'Estado Rótulo' in df.columns else [])
     with col4:
-        # Nuevo filtro de Licencia
-        licencia_filter = st.selectbox("Licencia de Rotulación", ["Todos", "Encontrada", "No encontrada"])
+        licencia_filter = st.selectbox("Licencia de Rotulación", ["Todos", "Encontrado", "No encontrado"])
 
     # Aplicar filtros
     filtered_df = df.copy()
@@ -72,9 +71,9 @@ if not df.empty:
         filtered_df = filtered_df[filtered_df['Estado Rótulo'].isin(estado_filter)]
         
     # Aplicar filtro de Licencia
-    if licencia_filter == "Encontrada":
+    if licencia_filter == "Encontrado":
         filtered_df = filtered_df[filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
-    elif licencia_filter == "No encontrada":
+    elif licencia_filter == "No encontrado":
         filtered_df = filtered_df[~filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
 else:
     filtered_df = pd.DataFrame()
@@ -82,7 +81,7 @@ else:
 
 # --- 5. Mapa Interactivo ---
 st.header("Mapa Interactivo")
-# Centrar el mapa en España por defecto
+# Centrar el mapa en España por defecto, usando OpenStreetMap (sin marcas de agua)
 m = folium.Map(location=[40.4637, -3.7492], zoom_start=6, tiles="OpenStreetMap")
 
 pins_layer = folium.FeatureGroup(name="📍 Rótulos", show=True)
@@ -95,17 +94,17 @@ if not filtered_df.empty:
             estado = str(row.get('Estado Rótulo', 'Pendiente'))
             pin_color = get_estado_color(estado)
             
-            # Enlace a Google Maps
-            gmaps_link = f"https://www.google.com/maps/search/?api=1&query={row['Latitude']},{row['Longitude']}"
+            # NUEVO ENLACE: Abre directamente en modo Street View
+            gmaps_link = f"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint={row['Latitude']},{row['Longitude']}"
             
-            # Enlace a la Licencia (Drive o descarga)
+            # Enlace a la Licencia
             licencia_link = str(row.get('Licencia Rótulo', ''))
             if pd.notna(licencia_link) and licencia_link.startswith('http'):
                 licencia_html = f'<a href="{licencia_link}" target="_blank" style="color: #28a745; font-weight: bold;">📄 Ver Licencia de Rotulación</a>'
             else:
                 licencia_html = '<i style="color: gray;">Sin licencia adjunta</i>'
                 
-            # Extraer las Observaciones (si existen y no están vacías)
+            # Extraer las Observaciones
             observaciones_texto = row.get('Observaciones')
             obs_html = ""
             if pd.notna(observaciones_texto) and str(observaciones_texto).strip() != '':
@@ -132,7 +131,7 @@ if not filtered_df.empty:
                 {obs_html}
                 
                 <br><br>
-                <a href="{gmaps_link}" target="_blank" style="text-decoration: none; color: #0056b3; font-weight: bold;">📍 Abrir en Google Maps</a>
+                <a href="{gmaps_link}" target="_blank" style="text-decoration: none; color: #0056b3; font-weight: bold;">📍 Ver Rótulo en Street View</a>
             </div>
             """
             
@@ -160,11 +159,9 @@ st_folium(m, width=1200, height=650, returned_objects=[])
 # --- 6. Tabla de Datos y Exportación ---
 st.header("Datos de los Centros")
 if not filtered_df.empty:
-    # Ocultar las columnas generadas internamente para que la tabla sea fiel al CSV
     display_df = filtered_df.drop(columns=['Latitude', 'Longitude'], errors='ignore')
     st.dataframe(display_df, use_container_width=True)
 
-    # Botón para descargar
     csv = filtered_df.to_csv(index=False).encode('utf-8')
     st.download_button(
         label="Descargar datos filtrados (CSV)",
