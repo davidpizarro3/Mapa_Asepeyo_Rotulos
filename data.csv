@@ -46,7 +46,7 @@ Elche,C. Valenciana,Alicante,"CL BARCHELL 23 CENTRO,0","38.26987, -0.66969",Buen
 Eloy Gonzalo,Madrid,Madrid,"Eloy Gonzalo, 23","40.43457, -3.70085",Bueno,,
 Ferrol,Galicia,La Coruña,"Gl. Poeta Uxio Novoneira, 1","43.48633, -8.21818",Bueno,,
 Figueres,Catalunya,Girona,"MIGDIA 3, ASEPEYO, LOC, MUTUA","42.26324, 2.96772",Bueno,,
-Francisco Silvela,Madrid,Madrid,"Francisco Silvela, 79-81","40.43648, -3.67702",Bueno,,
+Francisco Silvela,Madrid,Madrid,"Francisco Silvela, 79-81","40.43648, -3.67702",Bueno,https://drive.google.com/file/d/17_NlXmc16JTERoBQU90AxPr4cwXW1iqO/view,
 Fuengirola,Andalucia,Málaga,"AV SANTA AMALIA 0, EDIFICIO MIRAMAR PYA, E-009, AM","36.53132, -4.62757",Bueno,,
 Fuenlabrada,Madrid,Madrid,"Avda. de la Constitución, 63","40.28118, -3.78545",Bueno,,
 Gandía-1,C. Valenciana,Valencia,"Plaça Parc de l'Estació, 20","38.97122, -0.18039",Bueno,,
@@ -56,7 +56,7 @@ Getafe,Madrid,Madrid,"San Vicente, 7","40.30703, -3.72591",Bueno,,
 Gijón,Asturias,Asturias,"CL ENRIQUE MARTINEZ 15 BAJO,1","43.53674, -5.65285",Bueno,,
 Girona,Catalunya,Girona,CALLE JOAN TORRO I CABRATOSA Nº24,"41.96458, 2.80788",Bueno,,
 Gran Canaria Sur,Canarias,Las Palmas,CL PARTERA LEONORITA 4 LOCAL LOCAL,"27.76616, -15.57402",Bueno,,
-Granada,Andalucia,Granada,"CAMINO DE RONDA 172, PRINCESA-2, ASEPEYO","37.18083, -3.61217",Malo,,"Presenta mal estado, descolorido, oxidado y con la iluminación muy deteriorada. Las luces del rótulo iluminan poco por la noche. "
+Granada,Andalucia,Granada,"CAMINO DE RONDA 172, PRINCESA-2, ASEPEYO","37.18083, -3.61217",Malo,https://drive.google.com/file/d/1klIxLBy1dF4_SBI72RUFhn0n90r9wVjt/view,"Presenta mal estado, descolorido, oxidado y con la iluminación muy deteriorada. Las luces del rótulo iluminan poco por la noche. "
 Granollers,Catalunya,Barcelona,"Alfons Iv, 27-31","41.60466, 2.28826",Bueno,,
 Guadalajara,Cast. La Mancha,Guadalajara,"C/ SATURNINO CALLEJA, 2-BIS , Bajo","40.64222, -3.14556",Malo,,"Necesaria sustitución, letras corpóreas en la esquina que aparece una cruz."
 Guadalhorce,Andalucia,Málaga,"CARLO GOLDONI (PG.GUADALHORCE) 84, LOC","36.69845, -4.49216",Bueno,,
@@ -93,21 +93,21 @@ Mercabarna,Catalunya,Barcelona,"MBARNA-L7 0, PARCELA S/N 8, 8-I","41.32564, 2.11
 Mérida,Extremadura,Badajoz,"Av. Reina Sofía, s/n., bloque 1,","38.91228, -6.33515",Bueno,,
 Molins de Rei,Catalunya,Barcelona,CALLE SALVADOR SEGUI Nº10,"41.40485, 2.02429",Bueno,,
 Mollet del Vallès,Catalunya,Barcelona,"AV JAUME I 190, BJO","41.54119, 2.21393",Bueno,,
-Móstoles-2,Madrid,Madrid,"Los Maestros, 3","40.32668, -3.87971",Malo,,El rótulo Exterior va presentando pequeños signos de deterioro
+Móstoles-2,Madrid,Madrid,"Los Maestros, 3","40.32668, -3.87971",Malo,,El rótulo exterior va presentando pequeños signos de deterioro
 Murcia,Murcia,Murcia,"Avda. Don Juan de Borbón, 16","37.99417, -1.12419",Bueno,,
 Olot,Catalunya,Girona,AVENIDA DELS REIS CATOLICS Nº40,"42.18427, 2.48124",Bueno,,
 Olula del Río,Andalucia,Almería,AVENIDA ALMANZORA Nº10,"37.35557, -2.29575",Bueno,,
 Ourense,Galicia,Ourense,"Avda. do Regato, 1-3 (prolongación Ntra. Sra. de la Sainza-Rotonda C/. Zamora)","42.32441, -7.86311",Bueno,,
 Oviedo,Asturias,Asturias,"CL GENERAL ELORZA 28 BAJO,3","43.36629, -5.84367",Bueno,,
 Palamós,Catalunya,Girona,"BARCELONA 10, LOC, LOCAL 2","41.85056, 3.12398",Bueno,,
-Palencia,Cast. León,Palencia,"Avda CASTILLA, 65, Bajo 4","42.00739, -4.53497",Malo,,Sustitución de la banderola y mantenimiento de las luces. 
+Palencia,Cast. León,Palencia,"Avda CASTILLA, 65, Bajo 4","42.00739, -4.53497",Malo,,Sustitución de la banderola y mantenimiento de las luces.
 Palma de Mallorca,Islas Baleares,Palma de Mallorca,"Ramón Berenguer III, 12","39.57895, 2.65126",Bueno,,
 Pamplona,Navarra,Pamplona,"C/ ESQUIROZ, 43 , BAJO , 5","42.80323, -1.65153",Bueno,,
 Paterna,C. Valenciana,Valencia,"Avda. Vicente Mortes, 100","39.51066, -0.45263",Bueno,,
 Pineda de Mar,Catalunya,Barcelona,"MONTPALAU 6, GESTORIA","41.62799, 2.68817",Bueno,,
 Pinto,Madrid,Madrid,"C/ SALVADOR DALI, 11-BIS , Bajo","40.23828, -3.69881",Bueno,,
 Ponferrada,Cast. León,León,CL CALLE GENERAL VIVES 00058 * CL IN IC,"42.54905, -6.58381",Bueno,,
-Pontevedra,Galicia,Pontevedra,"Avda. Vigo, 34 (Edif. Oriente","42.42383, -8.63962",Bueno,,
+Pontevedra,Galicia,Pontevedra,"Avda. Vigo, 34 (Edif. Oriente","42.42383, -8.63962",Bueno,https://drive.google.com/file/d/1VeVhRK-Yw-D9sHOX91t9qrl-eTXuAXy5/view,
 Portugalete,Pais Vasco,Vizcaya,"San Juan Bautista, 1","43.32257, -3.02527",Bueno,,
 Pozoblanco,Andalucia,Córdoba,CALLE C/ SAN CRISTOBAL 8 LOCAL BAJO esquina C/ ALM,"38.37774, -4.85906",Bueno,https://drive.google.com/file/d/19fbx66A7c-PyIRMIcrmSLR1NLSSp2DTA/view,
 Puertollano,Cast. La Mancha,Ciudad Real,AV AVENIDA PRIMERO DE MAYO 00042 DU CL IN IC,"38.68643, -4.10314",Bueno,,
@@ -128,7 +128,7 @@ Sants,Catalunya,Barcelona,"LLANÇA 51, TORRE LLANSA, ENT-1","41.38055, 2.14416",
 Segovia,Cast. León,Segovia,PE PASEO CONDE DE SEPULVEDA 00022 * CL IN IC,"40.93823, -4.11492",Bueno,,
 Silla,C. Valenciana,Valencia,"Avda. Alacant, 60 / Jose Peman","39.36524, -0.40737",Bueno,,
 Soria,Cast. León,Soria,"C/ EDUARDO SAAVEDRA, 65, Bajo 2","41.75906, -2.47485",Bueno,,
-Talavera de la Reina,Cast. La Mancha,Toledo,"CALLE BANDERAS DE CASTILLA Nº2,","39.9624, -4.82503",Bueno,,
+Talavera de la Reina,Cast. La Mancha,Toledo,"CALLE BANDERAS DE CASTILLA Nº2,","39.9624, -4.82503",Bueno,https://drive.google.com/file/d/1j_uaaLm1_KUQJ5DptE-rTrUz7xkSY1Zs/view,
 Tarragona,Catalunya,Tarragona,"AV CATALUNYA 43, BJO","41.12334, 1.2471",Bueno,,
 Tarragona Piso,Catalunya,Tarragona,"AV CATALUNYA 45, 1-1","41.12339, 1.24682",Bueno,,
 Telde,Canarias,Las Palmas,AV CONSTITUCION 2.CLINICA.,"27.9988, -15.41453",Bueno,,
@@ -139,10 +139,10 @@ Terrassa,Catalunya,Barcelona,"COL.LEGI 6, LOCALS, LOC, LOCAL-1","41.56038, 2.010
 Teruel,Aragon,Teruel,"PS OVALO 9, ASEPEYO","40.34053, -1.10771",Bueno,,
 Toledo,Cast. La Mancha,Toledo,"C/ ECUADOR, 4","39.86706, -4.02978",Bueno,,
 Tolosa,Pais Vasco,Guipuzcoa,"C/ IGARONDO KALEA, 7 , BAJO , 1","43.13703, -2.07077",Bueno,,
-Torrejón de Ardoz,Madrid,Madrid,"Avda. de la  Constitución, 99","40.45732, -3.47391",Bueno,,
+Torrejón de Ardoz,Madrid,Madrid,"Avda. de la  Constitución, 99","40.45732, -3.47391",Bueno,https://drive.google.com/file/d/1YBF6T0Q3jRY9YKFui8Xo1Z-bT6coq4_G/view,
 Tres Cantos,Madrid,Madrid,"Avda. de la Industria, 56","40.61481, -3.70278",Bueno,,
 Tudela,Navarra,Tudela,"Carretera Alfaro, 34","42.06445, -1.61439",Malo,,"El rótulo presenta roturas y ha perdido el color, dando una mala imagen."
-Utebo,Aragon,Zaragoza,"C. Rumanía, 1D, 50180 Utebo, Zaragoza","41.71003, -1.0122",Malo,,El rótulo presenta grietas y se encuentra en muy malas condiciones. 
+Utebo,Aragon,Zaragoza,"C. Rumanía, 1D, 50180 Utebo, Zaragoza","41.71003, -1.0122",Malo,,El rótulo presenta grietas y se encuentra en muy malas condiciones.
 Valdemoro,Madrid,Madrid,"Pº de la Estación, 4-6","40.19131, -3.67316",Bueno,,
 Valdepeñas,Cast. La Mancha,Ciudad Real,"Seis de Junio, 49","38.76295, -3.38692",Bueno,,
 Valencia Baleares,C. Valenciana,Valencia,"Avda BALEARES, 16, Bajo Izq","39.46293, -0.35497",Malo,,"El rótulo se encuentra en mal estado, con roturas en las letras y fondo."
@@ -156,7 +156,7 @@ Vic-1,Catalunya,Girona,PZ ESTACIO 5,"41.93131, 2.24938",Bueno,,
 Vic-2,Catalunya,Girona,"PZ ESTACIO 7, BJO","41.93118, 2.24968",Bueno,,
 Vigo,Galicia,Pontevedra,"CL Barcelona, 37","42.22585, -8.72342",Bueno,,
 Vilafranca del Panadès,Catalunya,Barcelona,"Bisbe Panyelles, 17 - local 3","41.34383, 1.70197",Bueno,,
-Vilagarcía de Arousa,Galicia,Pontevedra,"Rua José Fariña Ferreño, 13 bajo1","42.59208, -8.76296",Bueno,,
+Vilagarcía de Arousa,Galicia,Pontevedra,"Rua José Fariña Ferreño, 13 bajo1","42.59208, -8.76296",Bueno,https://drive.google.com/file/d/1zKFM1fkTMKTzfRr85Q7q61lzcsfb7UDt/view,
 Vilanova i la Geltrú,Catalunya,Barcelona,"Rambla Samá, 81-83","41.22012, 1.72454",Bueno,,
 Villanueva de la Serena,Extremadura,Badajoz,"Plza.  Corazón de Jesús, 11","38.97051, -5.7996",Bueno,,
 Villaverde Alto,Madrid,Madrid,"C/ DOMINGO PARRAGA, 52, Bajo 3","40.34218, -3.71345",Bueno,,
