@@ -84,6 +84,7 @@ st.header("Mapa Interactivo")
 # Centrar el mapa en España por defecto, usando OpenStreetMap (sin marcas de agua)
 m = folium.Map(location=[40.4637, -3.7492], zoom_start=6, tiles="OpenStreetMap")
 
+pins_layer = folium.FeatureGroup(name="📍 Rótulos", show=True)
 
 if not filtered_df.empty:
     for idx, row in filtered_df.iterrows():
