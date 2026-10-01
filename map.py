@@ -72,9 +72,9 @@ if not df.empty:
         filtered_df = filtered_df[filtered_df['Estado Rótulo'].isin(estado_filter)]
         
     # Aplicar filtro de Licencia
-    if licencia_filter == "Con Licencia":
+    if licencia_filter == "Encontrada":
         filtered_df = filtered_df[filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
-    elif licencia_filter == "Sin Licencia":
+    elif licencia_filter == "No encontrada":
         filtered_df = filtered_df[~filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
 else:
     filtered_df = pd.DataFrame()
