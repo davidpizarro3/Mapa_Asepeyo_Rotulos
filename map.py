@@ -60,7 +60,7 @@ if not df.empty:
         estado_filter = st.multiselect("Estado del Rótulo", df['Estado Rótulo'].dropna().unique() if 'Estado Rótulo' in df.columns else [])
     with col4:
         # Nuevo filtro de Licencia
-        licencia_filter = st.selectbox("Licencia de Rotulación", ["Todos", "Con Licencia", "Sin Licencia"])
+        licencia_filter = st.selectbox("Licencia de Rotulación", ["Todos", "Encontrada", "No encontrada"])
 
     # Aplicar filtros
     filtered_df = df.copy()
