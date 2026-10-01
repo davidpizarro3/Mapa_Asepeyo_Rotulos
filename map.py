@@ -83,7 +83,7 @@ else:
 # --- 5. Mapa Interactivo ---
 st.header("Mapa Interactivo")
 # Centrar el mapa en España por defecto
-m = folium.Map(location=[40.4637, -3.7492], zoom_start=6, tiles="CartoDB positron")
+m = folium.Map(location=[40.4637, -3.7492], zoom_start=6, tiles="OpenStreetMap")
 
 pins_layer = folium.FeatureGroup(name="📍 Rótulos", show=True)
 
