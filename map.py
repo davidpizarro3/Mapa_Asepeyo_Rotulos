@@ -55,7 +55,7 @@ if not df.empty:
     with col1:
         comunidad_filter = st.multiselect("Comunidad", df['Comunidad'].dropna().unique() if 'Comunidad' in df.columns else [])
     with col2:
-        centre_filter = st.multiselect("Centre", df['Centre'].dropna().unique() if 'Centre' in df.columns else [])
+        centre_filter = st.multiselect("Centro", df['Centre'].dropna().unique() if 'Centre' in df.columns else [])
     with col3:
         estado_filter = st.multiselect("Estado del Rótulo", df['Estado Rótulo'].dropna().unique() if 'Estado Rótulo' in df.columns else [])
     with col4:
