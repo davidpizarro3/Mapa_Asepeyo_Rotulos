@@ -25,7 +25,7 @@ def tiene_licencia(val):
 @st.cache_data(ttl=60)
 def load_data():
     # URL raw de tu repositorio público en GitHub
-    csv_url = "https://raw.githubusercontent.com/davidpizarro3/Mapa_Asepeyo_Rotulos/refs/heads/main/data.csv"
+    csv_url = "https://docs.google.com/spreadsheets/d/1YnE7ZFtkVufzo3Dlqc09JbqzAxw7Kf1Kod5TeM6dXM0/export?format=csv"
     
     try:
         df = pd.read_csv(csv_url)
@@ -42,7 +42,7 @@ def load_data():
             
         return df
     except Exception as e:
-        st.error(f"⚠️ Error al cargar los datos desde GitHub. Revisa la URL o el archivo. Detalle: {e}")
+        st.error(f"⚠️ Error al cargar los datos desde Drive. Revisa la URL o el archivo. Detalle: {e}")
         return pd.DataFrame()
 
 df = load_data()
