@@ -17,9 +17,9 @@ Azpeitia,Pais Vasco,Guipuzcoa,"Avda LANDETA HIRIBIDEA, 1 , BAJO","43.17829, -2.2
 Badajoz,Extremadura,Badajoz,"Av. Juan Pereda Pila, 16","38.86908, -6.97433",Bueno,,,
 Badalona,Catalunya,Barcelona,CREU 27-LOCAL 2 I.IGLESIAS 2,"41.44885, 2.24502",Bueno,,,
 Basauri,Pais Vasco,Vizcaya,"C/ URBI Kalea, 21, Bajo 7","43.23699, -2.87785",Bueno,,,
-Benidorm,C. Valenciana,Alicante,"C/ LA NUCIA, 4, 15 Edif. MarinaTolls II","38.54507, -0.1322",Regular,,Hueco encima de la puerta valorar poner un rótulo de Asepeyo,https://drive.google.com/drive/folders/1pk7U4VowwZIJ2o3A130ZrOjGxw0XrYFn
+Benidorm,C. Valenciana,Alicante,"C/ LA NUCIA, 4, 15 Edif. MarinaTolls II","38.54507, -0.1322",Malo,,Hueco encima de la puerta valorar poner un rótulo de Asepeyo,https://drive.google.com/drive/folders/1pk7U4VowwZIJ2o3A130ZrOjGxw0XrYFn
 Berga,Catalunya,Barcelona,"PZ CIM D' ESTELA 9, LOC, .","42.10506, 1.85174",Malo,,El rótulo presenta rotura de lona.,
-Bergara,Pais Vasco,Guipuzcoa,"Amilaga Kalea, 29","43.12663, -2.42309",Bueno,https://drive.google.com/file/d/1YmkRrh1V168cDs7UHoiUD4MwCXOQlCnc/view,,
+Bergara,Pais Vasco,Guipuzcoa,"Amilaga Kalea, 29","43.12663, -2.42309",Malo,https://drive.google.com/file/d/1YmkRrh1V168cDs7UHoiUD4MwCXOQlCnc/view,,
 Bilbao,Pais Vasco,Vizcaya,"Avda. Sabino Arana, 33-35","43.26068, -2.94609",Bueno,,,
 Burgos,Cast. León,Burgos,"C/ VITORIA, 54, Bajo 2","42.34326, -3.68841",Bueno,,,https://drive.google.com/drive/folders/1RiDqATbCRQ68MJwZQUsX4df9scoNsoh3
 Cáceres,Extremadura,Cáceres,"Avda. Hernán Cortés, 36","39.47611, -6.3794",Bueno,,,
@@ -64,7 +64,7 @@ Hospital de Coslada,Madrid,Madrid,AV AVENIDA SAN PABLO 00031 AT CL IN IC,"40.436
 Hospital de Sant Cugat,Catalunya,Barcelona,"AV ALCALDE BARNILS 0, EDIFICIO S/N ASEPEYO","41.48933, 2.07851",Bueno,,,
 Hospital Sevilla-La Cartuja,Andalucia,Sevilla,"AMERICO VESPUCIO 0, PARCELA TA 22.1, MUTUA MEDICA","37.40305, -6.00844",Bueno,,,
 Huelva,Andalucia,Huelva,AVENIDA ALEMANIA Nº0,"37.25654, -6.95757",Bueno,,,
-Huesca,Aragon,Huesca,"PZ SAN ANTONIO 10, LOC","42.13543, -0.40799",Regular,,Valorar estado del rótulo y propuesta de apaño,
+Huesca,Aragon,Huesca,"PZ SAN ANTONIO 10, LOC","42.13543, -0.40799",Malo,,Valorar estado del rótulo y propuesta de apaño,
 Humanes,Madrid,Madrid,"Ramón y Cajal, 15","40.25982, -3.82122",Bueno,,,
 Jaén,Andalucia,Jaén,"AV ANDALUCIA 11, BJO, Y","37.77706, -3.79243",Bueno,,,
 Jerez de la Frontera,Andalucia,Cadíz,"LEALAS 43, BJO, Y","36.69057, -6.14278",Bueno,,,
@@ -112,7 +112,7 @@ Portugalete,Pais Vasco,Vizcaya,"San Juan Bautista, 1","43.32257, -3.02527",Bueno
 Pozoblanco,Andalucia,Córdoba,CALLE C/ SAN CRISTOBAL 8 LOCAL BAJO esquina C/ ALM,"38.37774, -4.85906",Bueno,https://drive.google.com/file/d/19fbx66A7c-PyIRMIcrmSLR1NLSSp2DTA/view,,
 Puertollano,Cast. La Mancha,Ciudad Real,AV AVENIDA PRIMERO DE MAYO 00042 DU CL IN IC,"38.68643, -4.10314",Bueno,,,
 Reus,Catalunya,Tarragona,"AV MARIA FORTUNY 2, BJO-1","41.15305, 1.11548",Bueno,,,https://drive.google.com/drive/folders/1Zuvqxq9URVkLrtKtEyRGI6fFy_xnNiM0
-Sabadell,Catalunya,Barcelona,"RD RAMBLA PONENT 8, BJO","41.54443, 2.10031",Regular,,Realizar apaño en las letras,
+Sabadell,Catalunya,Barcelona,"RD RAMBLA PONENT 8, BJO","41.54443, 2.10031",Malo,,Realizar apaño en las letras,
 Sabiñánigo,Aragon,Huesca,"AV HUESCA 0, ASEGURADORA","42.51566, -0.36249",Malo,,"El rótulo es antigüo y se transparenta mucho la luz, dejando una imagen de dejadez. Se encuentra muy desgastado y en muchos sitios están desencajados.",
 Sagrera,Catalunya,Barcelona,"AV MERIDIANA 235, LOC, VTA AUTOS","41.41933, 2.18661",Bueno,,,
 Salamanca,Cast. León,Salamanca,"P.º ESTACION, 27, Bajo 3","40.96957, -5.65608",Bueno,https://drive.google.com/file/d/1BQzVVOoVYnuVB1W0D6mW8iRVu2Igtjf5/view,,
@@ -149,7 +149,7 @@ Valencia Baleares,C. Valenciana,Valencia,"Avda BALEARES, 16, Bajo Izq","39.46293
 Valencia Cid,C. Valenciana,Valencia,"Avda CID, 146, Bajo 01","39.47015, -0.41031",Bueno,,,
 Valladolid,Cast. León,Valladolid,"Avda SALAMANCA, 1, Bajo 1","41.65895, -4.73447",Bueno,,,
 Valls,Catalunya,Tarragona,"PS ESTACIO DE L' 5, LOCAL 4","41.28644, 1.25472",Malo,,"Muy desgastado, necesario cambio de vinilo",https://drive.google.com/drive/folders/1-rSFYti1sUuSstFUR5xNlJU5cG0ZOUla
-"Via Augusta 18, ENT.",Catalunya,Barcelona,"VIA AUGUSTA 18, NO USAR, E-1 ENT","41.39708, 2.15485",Bueno,,,https://drive.google.com/drive/folders/1pCavyE4n7_GO76Yck1FR2i4Fu1rjWN3j
+"Via Augusta 18, ENT.",Catalunya,Barcelona,"VIA AUGUSTA 18, NO USAR, E-1 ENT","41.39708, 2.15485",Malo,,,https://drive.google.com/drive/folders/1pCavyE4n7_GO76Yck1FR2i4Fu1rjWN3j
 Via Augusta 36,Catalunya,Barcelona,"VIA AUGUSTA 34, BJO","41.39797, 2.15398",Bueno,,,
 Via Augusta 48,Catalunya,Barcelona,"VIA AUGUSTA 48, 3-3","41.39841, 2.15376",Bueno,,,
 Vic-1,Catalunya,Girona,PZ ESTACIO 5,"41.93131, 2.24938",Bueno,,,
