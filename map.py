@@ -49,7 +49,7 @@ df = load_data()
 
 # --- 4. Filtros ---
 st.header("Filtrar Centros")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3 = st.columns(3)
 
 if not df.empty:
     with col1:
@@ -58,8 +58,6 @@ if not df.empty:
         centre_filter = st.multiselect("Centro", df['Centre'].dropna().unique() if 'Centre' in df.columns else [])
     with col3:
         estado_filter = st.multiselect("Estado del Rótulo", df['Estado Rótulo'].dropna().unique() if 'Estado Rótulo' in df.columns else [])
-    with col4:
-        licencia_filter = st.selectbox("Licencia de Rotulación", ["Todos", "Encontrada", "No encontrada"])
 
     # Aplicar filtros
     filtered_df = df.copy()
@@ -69,12 +67,6 @@ if not df.empty:
         filtered_df = filtered_df[filtered_df['Centre'].isin(centre_filter)]
     if estado_filter:
         filtered_df = filtered_df[filtered_df['Estado Rótulo'].isin(estado_filter)]
-        
-    # Aplicar filtro de Licencia
-    if licencia_filter == "Encontrada":
-        filtered_df = filtered_df[filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
-    elif licencia_filter == "No encontrada":
-        filtered_df = filtered_df[~filtered_df['Licencia Rótulo'].apply(tiene_licencia)]
 else:
     filtered_df = pd.DataFrame()
     st.warning("No se han podido cargar los datos para aplicar filtros.")
